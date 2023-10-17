@@ -49,8 +49,7 @@ public:
             }
             i = j - 1;
         }
-        //cout << endl;
-        
+
         int res = 0;
         for(int i = 0; i <= min(k, tot); i++) {
             res += p[i];
