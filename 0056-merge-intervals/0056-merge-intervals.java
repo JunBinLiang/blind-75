@@ -1,5 +1,5 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
-        return Arrays.stream(intervals).sorted((o, p) -> o[0] - p[0]).reduce(new LinkedList<int[]>(), (t, u) -> (t.isEmpty() || t.getLast()[1] < u[0]) && t.add(u) || (t.getLast()[1] = Math.max(t.getLast()[1], u[1])) > 0 ? t : t, (t, u) -> t).toArray(new int[1][]);
+        return Arrays.stream(intervals).sorted((o, p) -> o[0] - p[0]).reduce(new LinkedList<int[]>(), (t, u) -> (t.isEmpty() || t.getLast()[1] < u[0]) && t.add(u) || (t.getLast()[1] = Math.max(t.getLast()[1], u[1])) > 0 ? t : t, (t, u) -> t).toArray(new int[0][]);
     }
 }
